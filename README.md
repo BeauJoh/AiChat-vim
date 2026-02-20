@@ -41,7 +41,7 @@ A Vim plugin that integrates with [AiChat CLI](https://github.com/sigoden/aichat
 Add the following to your `.vimrc`:
 
 ```
-Plugin 'yourusername/vim-aichat'
+Plugin 'BeauJoh/AiChat-vim'
 ```
 
 ### Requirements

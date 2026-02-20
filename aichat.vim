@@ -9,7 +9,7 @@
 " -----------------------------
 " Create AiChat buffer with optional lines
 " -----------------------------
-function! AichatBuf(lines) abort
+function! AiChatBuf(lines) abort
   botright new
   setlocal buftype=nofile         " scratch buffer
   setlocal bufhidden=wipe
@@ -19,7 +19,7 @@ function! AichatBuf(lines) abort
   let b:aichat_buf = 1
 
   " Header
-  call append(0, ['=== AI Chat Buffer ===', 'Type your prompt below and run <leader>s (or :AichatSend)'])
+  call append(0, ['=== AI Chat Buffer ===', 'Type your prompt below and run <leader>s (or :AiChatSend)'])
 
   " Insert initial lines if provided
   if !empty(a:lines)
@@ -42,7 +42,7 @@ endfunction
 " -----------------------------
 " Send last user prompt to AI
 " -----------------------------
-function! AichatSend() abort
+function! AiChatSend() abort
   if !exists('b:aichat_buf')
     echoerr "Not an AiChat buffer!"
     return
@@ -126,9 +126,9 @@ endfunction
 " -----------------------------
 " Command-line range-aware AiChat buffer (linewise only)
 " -----------------------------
-command! -range -bang -nargs=* AichatBuf call AichatBuf((<line1> !=# 0) ? getline(<line1>, <line2>) : [])
+command! -range -bang -nargs=* AiChatBuf call AiChatBuf((<line1> !=# 0) ? getline(<line1>, <line2>) : [])
 
-command! AichatSend call AichatSend()
+command! AiChatSend call AiChatSend()
 
 " -----------------------------
 " Helper: open AiChat buffer from visual selection positions
@@ -138,7 +138,7 @@ function! s:OpenAiChatFromSelection(start_line, start_col, end_line, end_col) ab
   " Trim first and last lines to selection columns
   let lines[0] = lines[0][a:start_col-1:]
   let lines[-1] = lines[-1][:a:end_col-1]
-  call AichatBuf(lines)
+  call AiChatBuf(lines)
 endfunction
 
 " -----------------------------
@@ -148,7 +148,7 @@ endfunction
 xnoremap <silent> <leader>a :<C-U>call <SID>OpenAiChatFromSelection(getpos("'<")[1], getpos("'<")[2], getpos("'>")[1], getpos("'>")[2])<CR>
 
 " Normal mode: open empty AiChat buffer
-nnoremap <silent> <leader>a :call AichatBuf([])<CR>
+nnoremap <silent> <leader>a :call AiChatBuf([])<CR>
 
 " Send prompt inside AiChat buffer
-autocmd FileType ai_chat nnoremap <buffer> <leader>s :AichatSend<CR>
+autocmd FileType ai_chat nnoremap <buffer> <leader>s :AiChatSend<CR>
