@@ -28,9 +28,9 @@ A Vim plugin that integrates with [AiChat CLI](https://github.com/sigoden/aichat
 
 ### Commands
 
-- `:AichatBuf` – Open a new AiChat buffer.
-- `:'<,'>AichatBuf` – Open AiChat buffer with the selected line range (linewise only).
-- `:AichatSend` – Send the last prompt in the AiChat buffer to the AI.
+- `:AiChatBuf` – Open a new AiChat buffer.
+- `:'<,'>AiChatBuf` – Open AiChat buffer with the selected line range (linewise only).
+- `:AiChatSend` – Send the last prompt in the AiChat buffer to the AI.
 
 ---
 
@@ -43,6 +43,12 @@ Add the following to your `.vimrc`:
 ```
 Plugin 'BeauJoh/AiChat-vim'
 ```
+
+Source or restart vim, then run:
+
+```
+:BundleInstall
+````
 
 ### Requirements
 
