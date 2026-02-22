@@ -4,6 +4,10 @@ A Vim plugin that integrates with [AiChat CLI](https://github.com/sigoden/aichat
 
 ---
 
+[![asciicast](https://asciinema.org/a/IGxsdeDLoTLOf4ur.svg)](https://asciinema.org/a/IGxsdeDLoTLOf4ur)
+
+---
+
 ## Features
 
 - **Multi-turn AI chat**: Interact with AI in a dedicated scratch buffer.
@@ -15,9 +19,6 @@ A Vim plugin that integrates with [AiChat CLI](https://github.com/sigoden/aichat
 - **Auto-scroll**: Always scrolls to the latest AI response.
 
 ---
-
-[![asciicast](https://asciinema.org/a/rAWL2lL0oOotJr0m.svg)](https://asciinema.org/a/rAWL2lL0oOotJr0m)
-
 
 ## Usage
 
