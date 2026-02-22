@@ -16,6 +16,9 @@ A Vim plugin that integrates with [AiChat CLI](https://github.com/sigoden/aichat
 
 ---
 
+[![asciicast](https://asciinema.org/a/rAWL2lL0oOotJr0m.svg)](https://asciinema.org/a/rAWL2lL0oOotJr0m)
+
+
 ## Usage
 
 ### Mappings
